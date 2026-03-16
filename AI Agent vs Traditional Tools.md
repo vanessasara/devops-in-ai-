@@ -5,7 +5,7 @@ You have probably already used tools like **Elasticsearch or Splunk**, and now y
 There are **three common approaches to log analysis** that teams typically implement before or alongside AI agents.
 
 ---
-
+[^2]
 # Basic Script
 
 Most teams start with this step. They write a **simple Python script** that searches through log files and sends a notification if an error is found.
