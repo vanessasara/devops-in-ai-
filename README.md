@@ -155,7 +155,7 @@ simple answer no , but you will make an ai agent that can access through things 
 
 you are not replacing your logging system you are giving intelligence to it 
 
-![Logging Diagram](image.png)
+![[Pasted image 20260314194938.png]]
 
 # Key points Why an AI agent might do it well 
 
@@ -174,7 +174,7 @@ you dont explecity need ai in everything just to enter in ai hype.
 3. Building ai agents can be time consuming its not a magic wond you simply ask claude code that works perfectly on dev but explode in production, even when working with claude code we still need some consideration on some parts in order to make that long term not a temporalily ai agent 
 
 
-# Cost break down 
+[[Cost break down ]]
 
 adding an ai agent means you need more services in you infra lets do the math:
 
