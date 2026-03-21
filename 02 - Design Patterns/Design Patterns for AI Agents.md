@@ -1,7 +1,8 @@
 ---
+title: Design Patterns for AI Agents
+tags: [patterns, design, react]
+---
 
----
----
 There are **design patterns for almost everything**, whether it is solving common coding problems or designing applications.
 
 Similarly, in AI agents there are **several design patterns** that help make agents **more efficient, reliable, and easier to scale**.
@@ -67,7 +68,7 @@ This pattern is best used when the agent needs to **collect data from external s
 
 ---
 
-# 3. REACT PATTER (Reasoning + Acting)
+# REACT PATTERN (Reasoning + Acting)
 
 This is one of the **most effective patterns to start with**.
 

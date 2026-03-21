@@ -1,3 +1,9 @@
+---
+tags: [concepts, agent, react, role]
+---
+
+# What Your Agent Needs to Know
+
 A language model on its own is just a tool. An agent has a specific purpose, defined capabilities, and a structured way of working through problems. This note covers the building blocks that make a logging agent actually useful.
 
 ---

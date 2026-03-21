@@ -5,7 +5,9 @@ You have probably already used tools like **Elasticsearch or Splunk**, and now y
 There are **three common approaches to log analysis** that teams typically implement before or alongside AI agents.
 
 ---
-[^2]
+tags: [introduction, comparison]
+---
+
 # Basic Script
 
 Most teams start with this step. They write a **simple Python script** that searches through log files and sends a notification if an error is found.
@@ -97,8 +99,10 @@ AI agents:
 - Introduce additional operational costs
     
 
-We already discussed some of these financial considerations in [[Cost break down]].
+We already discussed some of these financial considerations in [[../03 - Implementation/Cost break down|Cost Breakdown]].
 
 AI is **not magic**. It is a discipline that requires structured patterns and reliable architecture to make agents **safe and effective enough for production systems**.
 
-Next, let's discuss the [[Core Components of an AI Agent]].
+---
+
+Next, let's discuss the [[../01 - Core Concepts/Core Components of an AI Agent|Core Components of an AI Agent]].

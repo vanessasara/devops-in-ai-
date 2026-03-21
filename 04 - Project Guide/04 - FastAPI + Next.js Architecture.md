@@ -1,3 +1,7 @@
+---
+tags: [guide, fastapi, nextjs, fullstack]
+---
+
 # FastAPI + Next.js Architecture
 
 This chapter replaces the book's Streamlit UI with a production-ready full-stack setup. The backend is FastAPI. The frontend is Next.js with TypeScript. They communicate over HTTP. The agent logic from Chapter 7 is completely unchanged.

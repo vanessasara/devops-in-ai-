@@ -1,3 +1,12 @@
+---
+title: Data Retrieval
+tags: [implementation, data, logs]
+---
+
+---
+tags: [implementation, data, retrieval]
+---
+
 # Getting Logs into Your Agent
 
 Your AI model can only analyze logs it actually has. Data retrieval is the layer responsible for pulling logs from wherever they live and feeding them to the agent in a structured, manageable way.
@@ -116,4 +125,7 @@ This keeps you within context limits, preserves the critical information, and be
 |Spikes exceed context limits|Use two-pass: cheap model summarizes, main model analyzes|
 
 The goal is consistent analysis quality regardless of log volume — whether it is a quiet Tuesday or a major outage, the agent uses the right strategy to stay within limits while keeping costs predictable.
-Next we will explore about [[What Your Agent Needs to Know]]
+
+---
+
+Next: [[../01 - Core Concepts/What Your Agent Needs to Know|What Your Agent Needs to Know]]

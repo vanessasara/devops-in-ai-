@@ -1,3 +1,7 @@
+---
+tags: [guide, project, architecture]
+---
+
 # How the Project Works
 
 This project is an AI-powered log analysis agent. You send it a question about your logs in plain language, and it reads, searches, and analyses your log files — then gives you a clear answer.

@@ -1,5 +1,9 @@
 
 ---
+tags: [patterns, multi-agent, architecture]
+---
+
+# Multi-Agent Systems
 
 ## Understanding Multi-Agent AI Systems
 

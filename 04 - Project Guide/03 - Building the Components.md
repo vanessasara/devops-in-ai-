@@ -1,3 +1,7 @@
+---
+tags: [guide, components, layers]
+---
+
 # Building the Components
 
 The book builds a layered architecture using LangChain. This project uses the same layered approach with the same reasoning — but using the OpenAI Agents SDK. The structure is identical. The code inside each layer is simpler.

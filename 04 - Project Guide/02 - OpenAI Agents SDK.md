@@ -1,3 +1,7 @@
+---
+tags: [guide, sdk, openai, agents]
+---
+
 # OpenAI Agents SDK
 
 > **Note:** The book this project follows teaches these concepts using LangChain. This project replaces LangChain entirely with the OpenAI Agents SDK + LiteLLM + Gemini. The concepts are the same. The code is simpler.
