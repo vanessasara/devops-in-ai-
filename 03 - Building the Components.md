@@ -68,19 +68,9 @@ This is the interface described in the book's Chapter 7. It's useful for testing
 
 ---
 
-## What the Book Does Differently
+## — Two Paths
 
-The book's Chapter 7 agent manages its own chat history internally using `InMemoryChatMessageHistory` and `RunnableWithMessageHistory`. Every query passes the full conversation history back into the model.
-
-This project's agent is stateless. `process_query` takes an input string and returns an output string. It remembers nothing between calls. The frontend holds the display history. The agent holds nothing.
-
-This is cleaner for a web interface. State belongs in the layer closest to the user — the frontend — not buried inside business logic.
-
----
-
-## Chapter 8 — Two Paths
-
-The book's Chapter 8 builds a **Streamlit** web interface.
+The builds a **Streamlit** web interface.
 
 ### Streamlit (book version)
 
