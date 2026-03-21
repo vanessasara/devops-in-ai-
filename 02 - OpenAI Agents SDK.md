@@ -64,10 +64,3 @@ The book uses LangChain. This project uses the Agents SDK. The chapters in this 
 
 ---
 
-## Chapter Mapping
-
-| Book Chapter | Book Stack | This Project |
-|---|---|---|
-| Chapter 6 | LangChain intro | Agents SDK intro (this file) |
-| Chapter 7 | LangChain components | Agents SDK layered architecture |
-| Chapter 8 | Streamlit UI | FastAPI + Next.js |
