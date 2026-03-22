@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Logging System for DevOps</title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css">
   <style>
     :root {
       --theme-color: #7c3aed;
-      --sidebar-width: 280px;
+      --sidebar-width: 300px;
+    }
+    .sidebar {
+      border-right: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    body.dark .sidebar {
+      border-right-color: rgba(255, 255, 255, 0.06);
+    }
+    .sidebar .sidebar-nav {
+      padding: 1rem 0.85rem 2rem;
+    }
+    .sidebar ul li {
+      margin: 0.15em 0;
+      line-height: 1.45;
+    }
+    .sidebar ul li a {
+      font-size: 13.5px;
+      padding: 0.2em 0;
+    }
+    .sidebar .sidebar-nav > ul > li > p,
+    .sidebar .sidebar-nav > ul > li > strong {
+      display: block;
+      margin-top: 1.1rem;
+      margin-bottom: 0.4rem;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    body.dark .sidebar .sidebar-nav > ul > li > p,
+    body.dark .sidebar .sidebar-nav > ul > li > strong {
+      color: #94a3b8;
+    }
+    .sidebar .sidebar-nav ul ul {
+      padding-left: 0.65rem;
+    }
+    .sidebar .sidebar-nav ul ul li a {
+      font-size: 13px;
+      color: #475569;
+    }
+    body.dark .sidebar .sidebar-nav ul ul li a {
+      color: #cbd5e1;
     }
     .app-name-link img {
       width: 24px;
@@ -23,87 +65,105 @@
       border-radius: 8px;
       font-size: 14px;
     }
-    .sidebar ul li a {
-      font-size: 14px;
-    }
     nav.app-nav {
       font-size: 14px;
+    }
+    .markdown-section {
+      max-width: 52rem;
     }
   </style>
 </head>
 <body>
   <div id="app"></div>
   <script>
-    window.$docsify = {
-      name: '🔍 AI Logging DevOps',
-      nameLink: '/',
-      repo: 'https://github.com/vanessasara/devops-in-ai-',
-      loadSidebar: true,
-      loadNavbar: true,
-      subMaxLevel: 3,
-      auto2top: true,
-      search: {
-        maxAge: 86400000,
-        paths: 'auto',
-        placeholder: 'Search docs...',
-        noData: 'No results found',
-        depth: 4,
-        hideOtherSidebarContent: false,
-      },
-      themeColor: '#7c3aed',
-      darklightTheme: {
-        siteFont: 'Source Sans Pro',
-        defaultTheme: 'light',
-        codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
-        bodyFontSize: '15px',
-        dark: {
-          accent: '#7c3aed',
-          toogleBackground: '#1e1e2e',
-          background: '#1e1e2e',
-          textColor: '#cdd6f4',
-          codeTextColor: '#cdd6f4',
-          codeBackGroundColor: '#181825',
-          borderColor: '#313244',
-          blockQuoteColor: '#a6adc8',
-          highlightColor: '#313244',
-          sidebarSublink: '#a6adc8',
-          codeTypeColor: '#cba6f7',
-          coverBackground: '#1e1e2e',
-          toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)',
+    (function () {
+      var host = window.location.hostname;
+      var path = window.location.pathname;
+      var parts = path.split('/').filter(function (p) {
+        return p && p !== 'index.html';
+      });
+      var basePath = '/';
+      if (host === 'localhost' || host === '127.0.0.1') {
+        basePath = '/';
+      } else if (host.endsWith('github.io') && parts.length >= 1) {
+        basePath = '/' + parts[0] + '/';
+      }
+      window.$docsify = {
+        basePath: basePath,
+        name: '🔍 AI Logging · DevOps',
+        nameLink: '#/README.md',
+        repo: 'https://github.com/vanessasara/devops-in-ai-',
+        homepage: 'README.md',
+        loadSidebar: true,
+        loadNavbar: true,
+        subMaxLevel: 3,
+        auto2top: true,
+        relativePath: false,
+        externalLinkTarget: '_blank',
+        notFoundPage: true,
+        search: {
+          maxAge: 86400000,
+          paths: 'auto',
+          placeholder: 'Search docs…',
+          noData: 'No results found',
+          depth: 4,
+          hideOtherSidebarContent: false,
         },
-        light: {
-          accent: '#7c3aed',
-          toogleBackground: '#eff1f5',
-          background: '#ffffff',
-          textColor: '#4c4f69',
-          codeTextColor: '#4c4f69',
-          codeBackGroundColor: '#f5f5f5',
-          borderColor: '#e0e0e0',
-          blockQuoteColor: '#6c6f85',
-          highlightColor: '#eff1f5',
-          sidebarSublink: '#6c6f85',
-          codeTypeColor: '#7c3aed',
-          coverBackground: '#ffffff',
-          toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/moon.svg)',
+        themeColor: '#7c3aed',
+        darklightTheme: {
+          siteFont: 'Source Sans Pro, system-ui, sans-serif',
+          defaultTheme: 'light',
+          codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+          bodyFontSize: '15px',
+          dark: {
+            accent: '#7c3aed',
+            toogleBackground: '#1e1e2e',
+            background: '#1e1e2e',
+            textColor: '#cdd6f4',
+            codeTextColor: '#cdd6f4',
+            codeBackGroundColor: '#181825',
+            borderColor: '#313244',
+            blockQuoteColor: '#a6adc8',
+            highlightColor: '#313244',
+            sidebarSublink: '#a6adc8',
+            codeTypeColor: '#cba6f7',
+            coverBackground: '#1e1e2e',
+            toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)',
+          },
+          light: {
+            accent: '#7c3aed',
+            toogleBackground: '#eff1f5',
+            background: '#ffffff',
+            textColor: '#4c4f69',
+            codeTextColor: '#4c4f69',
+            codeBackGroundColor: '#f5f5f5',
+            borderColor: '#e0e0e0',
+            blockQuoteColor: '#6c6f85',
+            highlightColor: '#eff1f5',
+            sidebarSublink: '#6c6f85',
+            codeTypeColor: '#7c3aed',
+            coverBackground: '#ffffff',
+            toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/moon.svg)',
+          },
         },
-      },
-      pagination: {
-        previousText: '← Previous',
-        nextText: 'Next →',
-        crossChapter: true,
-      },
-    }
+        pagination: {
+          previousText: '← Previous',
+          nextText: 'Next →',
+          crossChapter: true,
+        },
+      };
+    })();
   </script>
 
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-toml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-toml.min.js"></script>
 </body>
 </html>
