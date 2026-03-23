@@ -10,12 +10,12 @@ This repository contains structured notes and guides for understanding and imple
 
 | Section | Description | Start Here |
 |---------|-------------|------------|
-| **Introduction** | Why AI agents matter for DevOps | [[00 - Introduction/00-index]] |
-| **Core Concepts** | Building blocks of AI agents | [[01 - Core Concepts/00-index]] |
-| **Design Patterns** | Architectural patterns for agents | [[02 - Design Patterns/00-index]] |
-| **Implementation** | Practical considerations | [[03 - Implementation/00-index]] |
-| **Project Guide** | Step-by-step build guide | [[04 - Project Guide/00-index]] |
-| **Projects** | Working code examples | [[05 - Projects/00-index]] |
+| **Introduction** | Why AI agents matter for DevOps | [Start](00%20-%20Introduction/00-index.md) |
+| **Core Concepts** | Building blocks of AI agents | [Start](01%20-%20Core%20Concepts/00-index.md) |
+| **Design Patterns** | Architectural patterns for agents | [Start](02%20-%20Design%20Patterns/00-index.md) |
+| **Implementation** | Practical considerations | [Start](03%20-%20Implementation/00-index.md) |
+| **Project Guide** | Step-by-step build guide | [Start](04%20-%20Project%20Guide/00-index.md) |
+| **Projects** | Working code examples | [Start](05%20-%20Projects/00-index.md) |
 
 ---
 
@@ -66,7 +66,7 @@ ai-logging-agent Level 1/
 ### For Learners
 
 1. Open this repository in **Obsidian** for the best experience
-2. Start with `MOC.md` (Map of Content) for navigation
+2. Start with [`MOC.md`](MOC.md) (Map of Content) for navigation
 3. Follow the learning path: Introduction → Core Concepts → Design Patterns → Implementation → Project Guide
 
 ### For Developers
@@ -83,7 +83,7 @@ ai-logging-agent Level 1/
 This vault is optimized for **Obsidian**:
 
 - Each folder has an `00-index.md` for navigation
-- All internal links use wikilinks `[[filename]]`
+- Internal links use standard Markdown links for GitHub compatibility
 - Tags are added via frontmatter for graph clustering
 - Open `MOC.md` as your starting point
 

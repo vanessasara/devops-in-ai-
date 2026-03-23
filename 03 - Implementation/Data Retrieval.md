@@ -128,4 +128,4 @@ The goal is consistent analysis quality regardless of log volume — whether it 
 
 ---
 
-Next: [[../01 - Core Concepts/What Your Agent Needs to Know|What Your Agent Needs to Know]]
+Next: [What Your Agent Needs to Know](../01%20-%20Core%20Concepts/What%20Your%20Agent%20Needs%20to%20Know.md)

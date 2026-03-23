@@ -136,7 +136,7 @@ This ensures the agent stays within its intended scope.
 
 When building something simple, cooperation between agents may not be necessary.
 
-However, for **complex systems**, we often need [[../02 - Design Patterns/Multiple agents working together|Multiple Agents Working Together]].
+However, for **complex systems**, we often need [Multiple Agents Working Together](../02%20-%20Design%20Patterns/Multiple%20agents%20working%20together.md).
 
 In such cases, we may **handoff tasks to other specialized agents**, where each agent focuses on a specific skill or responsibility.
 
@@ -172,4 +172,4 @@ comm_agent = {
 
 Now that we are aware of these **6 components**, the next step is to understand **how they work together in practice**.
 
-See [[What Your Agent Needs to Know]] for how to structure an agent's knowledge and capabilities.
+See [What Your Agent Needs to Know](What%20Your%20Agent%20Needs%20to%20Know.md) for how to structure an agent's knowledge and capabilities.

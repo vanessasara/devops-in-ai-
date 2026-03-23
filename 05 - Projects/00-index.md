@@ -16,7 +16,7 @@ This section contains the actual implementation code and project files.
 
 A conversational agent that reads log files and answers questions about them.
 
-- [[ai-logging-agent Level 1/README|Project README]]
+- [Project README](02-nextjs-production/README.md)
 - **Backend:** FastAPI + OpenAI Agents SDK + Gemini
 - **Frontend:** Next.js + TypeScript + shadcn/ui
 
@@ -79,4 +79,4 @@ ai-logging-agent Level 1/
 
 ## Connections
 
-- Prerequisites: [[../04 - Project Guide/00-index|Project Guide]]
+- Prerequisites: [Project Guide](../04%20-%20Project%20Guide/00-index.md)

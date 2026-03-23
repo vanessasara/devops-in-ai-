@@ -1,0 +1,18 @@
+2024-01-28 08:15:00 INFO  Pod pod-java-app-7d9f8b6c5-xk2m9 started in namespace production
+2024-01-28 08:15:01 INFO  JVM memory: heap 512Mi/1Gi, non-heap 128Mi
+2024-01-28 08:20:00 WARN  Memory usage rising: heap 750Mi/1Gi (75%)
+2024-01-28 08:25:00 WARN  Memory usage critical: heap 920Mi/1Gi (92%)
+2024-01-28 08:25:30 WARN  GC overhead limit approaching - frequent collections
+2024-01-28 08:28:00 ERROR GC overhead limit exceeded
+2024-01-28 08:29:00 ERROR Failed to process large batch: OutOfMemoryError: Java heap space
+2024-01-28 08:29:30 ERROR DataProcessor task failed: OutOfMemoryError
+2024-01-28 08:29:45 ERROR CacheService failed to allocate buffer: OutOfMemoryError
+2024-01-28 08:30:00 ERROR java.lang.OutOfMemoryError: Java heap space
+2024-01-28 08:30:00 ERROR   at java.util.Arrays.copyOf(Arrays.java:3210)
+2024-01-28 08:30:00 ERROR   at com.app.DataProcessor.processBatch(DataProcessor.java:145)
+2024-01-28 08:30:05 INFO  Container exiting with code 137 (OOMKilled)
+2024-01-28 08:30:06 ERROR Kubernetes detected pod crash: CrashLoopBackOff
+2024-01-28 08:30:10 ERROR Container killed by OOM killer (exit code 137)
+2024-01-28 08:30:15 INFO  Kubernetes attempting pod restart (attempt 1/5)
+2024-01-28 08:31:00 ERROR Pod restart failed: still OOMKilling on startup
+2024-01-28 08:31:30 ERROR Status: CrashLoopBackOff - back-off 10s restarting

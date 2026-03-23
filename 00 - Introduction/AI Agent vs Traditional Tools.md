@@ -1,14 +1,18 @@
-Before we dive into building AI agents, we need to understand **why they fit into your organization**.
-
-You have probably already used tools like **Elasticsearch or Splunk**, and now you may be exploring how to **integrate AI agents into your existing systems**.
-
-There are **three common approaches to log analysis** that teams typically implement before or alongside AI agents.
-
 ---
 tags: [introduction, comparison]
 ---
 
-# Basic Script
+# AI Agents vs Traditional Tools
+
+Before building an AI logging agent, it is important to understand where it fits in your existing stack.
+
+Most teams already use platforms such as Elasticsearch, Splunk, or Datadog. AI should be treated as an intelligence layer that complements these systems.
+
+There are three common approaches to operational log analysis.
+
+---
+
+## 1) Basic Script
 
 Most teams start with this step. They write a **simple Python script** that searches through log files and sends a notification if an error is found.
 
@@ -38,7 +42,7 @@ However, they also have several limitations:
 
 ---
 
-# Traditional logging tools
+## 2) Traditional Logging Platforms
 
 There are several **enterprise-grade logging platforms** such as ELK, Splunk, and Datadog.
 
@@ -63,7 +67,7 @@ In other words, these platforms **do not provide intelligence by themselves**. E
 
 ---
 
-# Ai Logging Agents
+## 3) AI Logging Agents
 
 This is where things become more interesting.
 
@@ -99,10 +103,10 @@ AI agents:
 - Introduce additional operational costs
     
 
-We already discussed some of these financial considerations in [[../03 - Implementation/Cost break down|Cost Breakdown]].
+We discuss financial considerations in [Cost Breakdown](../03%20-%20Implementation/Cost%20break%20down.md).
 
 AI is **not magic**. It is a discipline that requires structured patterns and reliable architecture to make agents **safe and effective enough for production systems**.
 
 ---
 
-Next, let's discuss the [[../01 - Core Concepts/Core Components of an AI Agent|Core Components of an AI Agent]].
+Next, continue to [Core Components of an AI Agent](../01%20-%20Core%20Concepts/Core%20Components%20of%20an%20AI%20Agent.md).

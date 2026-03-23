@@ -126,7 +126,7 @@ Use this pattern when **structured investigation is required**.
 
 # MULTI-AGENT PATTERN
 
-This is the pattern we discussed earlier in [[Multiple agents working together]].
+This is the pattern discussed in [Multiple agents working together](Multiple%20agents%20working%20together.md).
 
 It is commonly used when building systems where **different agents specialize in different tasks**.
 

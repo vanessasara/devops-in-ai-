@@ -4,21 +4,52 @@ title: Understanding the Core Building Blocks
 tags: [concepts, fundamentals, llm]
 ---
 
-In this chapter we will learn about what ingredients we might be needing — like before cooking, we need some things. We don't throw random stuff together and hope for something good to happen.
+# Understanding the Core Building Blocks
 
-There are some concepts that you need to understand before building an AI agent, but don't worry — there's only a few of them. 
+Before building an AI agent, define the essential pieces clearly. A reliable system does not come from random components; it comes from intentional design.
 
-#### How does the llm works?
+---
 
-You dont need to understand how it works the neurel networks or anything expensive learning r algoritmic thinking , What you need to understand that LLM takes the text anlysis the query and answer based on user query 
+## How LLMs Work (Practical View)
 
-Think of its like a software that takes will takes our log file analyzes that log and recognizes that pattern that learned it during its training and generates the text based on what makes sense.
+You do not need deep expertise in neural network internals to build an effective DevOps agent.
 
-You have 2 options that you might be using to make your llm application:
+What you do need to understand:
 
-1. Cloud APIs: This are the services that host models for you and send your data over the internet and they send back the results. This is th eeasiet and most commonly method that people use worldwide 
-2. Self hosted LLM: These are the local models that you nee to configure yourself and this keeps your data rivate if your biggest concern is about privacy this can make your data in your hands and make things easier for the organization privacy 
+- An LLM receives input text (for example, user questions and log excerpts)
+- It identifies patterns from its training and provided context
+- It generates a response based on that context and prompt instructions
 
-### How Does Our LLM Get the Logs?
+In this project, the model behaves as a reasoning layer that interprets logs and explains likely causes in plain language.
 
-Any AI model can't access your data directly — that's why we use [[../03 - Implementation/Data Retrieval|Data Retrieval]].
+---
+
+## Model Hosting Options
+
+You typically have two deployment options:
+
+1. **Cloud APIs**
+   - Fastest way to ship
+   - Minimal infrastructure management
+   - Data is sent to a provider endpoint
+
+2. **Self-hosted models**
+   - Greater control over data residency
+   - More infrastructure and operational overhead
+   - Useful when privacy or compliance requirements are strict
+
+Both can work. Choose based on budget, latency, governance, and team capability.
+
+---
+
+## How the Model Gets Log Data
+
+An LLM cannot access your logs by itself. You must provide data through a retrieval layer and tool calls.
+
+That is why data retrieval is a core architectural concern:
+
+- Connect to log sources
+- Filter and format logs
+- Pass relevant context to the model
+
+See [Data Retrieval](../03%20-%20Implementation/Data%20Retrieval.md) for implementation patterns.

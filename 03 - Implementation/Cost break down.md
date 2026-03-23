@@ -28,4 +28,4 @@ If AI agents significantly reduce incident resolution time, they may justify the
 
 ---
 
-> See [[../00 - Introduction/README|Introduction]] for the full context on when AI agents make sense.
+> See [Introduction](../00%20-%20Introduction/README.md) for full context on when AI agents make sense.

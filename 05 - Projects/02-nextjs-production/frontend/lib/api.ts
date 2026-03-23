@@ -4,6 +4,8 @@ export interface Message {
   id: string
   role: "user" | "assistant"
   content: string
+  /** Present on new messages; older localStorage data may omit */
+  timestamp?: number
 }
 
 export async function sendMessage(message: string): Promise<string> {

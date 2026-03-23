@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend - AI Logging Agent
 
-## Getting Started
+This is the Next.js frontend for the AI Logging Agent project. It provides a chat-based interface for interacting with the FastAPI backend and viewing agent responses.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 + React 19
+- TypeScript
+- Tailwind CSS 4
+- shadcn/ui components
+
+## Prerequisites
+
+- Node.js 18+ (20+ recommended)
+- `pnpm` installed globally
+- Backend running on `http://localhost:8000` (or another configured URL)
+
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create `frontend/.env.local`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Production Build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm build
+pnpm start
+```
 
-## Deploy on Vercel
+## Linting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm lint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Key Files
+
+- `app/page.tsx` - App entry page
+- `components/chat.tsx` - Main chat container
+- `components/chat/sidebar.tsx` - Session and quick-prompt sidebar
+- `components/chat/message-bubble.tsx` - Message rendering
+- `lib/api.ts` - Backend API client
+- `lib/hooks/use-sessions.ts` - Session persistence
+
+## Notes
+
+- Session history is stored in browser local storage.
+- The frontend is intentionally decoupled from backend internals and communicates only through HTTP endpoints.

@@ -14,10 +14,10 @@ This section provides step-by-step guidance for building the Level 1 log analysi
 
 | Order | Topic | Description |
 |-------|-------|-------------|
-| 1 | [[01 - How the Project Works]] | Architecture overview, request flow, stack explanation |
-| 2 | [[02 - OpenAI Agents SDK]] | Core primitives: Agent, function_tool, Runner, LiteLLM |
-| 3 | [[03 - Building the Components]] | Six-layer architecture: Config, Tools, Agent, Utils, API, CLI |
-| 4 | [[04 - FastAPI + Next.js Architecture]] | Full-stack setup, component structure, request lifecycle |
+| 1 | [01 - How the Project Works](01%20-%20How%20the%20Project%20Works.md) | Architecture overview, request flow, stack explanation |
+| 2 | [02 - OpenAI Agents SDK](02%20-%20OpenAI%20Agents%20SDK.md) | Core primitives: Agent, function_tool, Runner, LiteLLM |
+| 3 | [03 - Building the Components](03%20-%20Building%20the%20Components.md) | Six-layer architecture: Config, Tools, Agent, Utils, API, CLI |
+| 4 | [04 - FastAPI + Next.js Architecture](04%20-%20FastAPI%20%2B%20Next.js%20Architecture.md) | Full-stack setup, component structure, request lifecycle |
 
 ---
 
@@ -25,10 +25,10 @@ This section provides step-by-step guidance for building the Level 1 log analysi
 
 Follow these guides in order:
 
-1. **[[01 - How the Project Works]]** - Understand the big picture
-2. **[[02 - OpenAI Agents SDK]]** - Learn the SDK primitives
-3. **[[03 - Building the Components]]** - Build the layered architecture
-4. **[[04 - FastAPI + Next.js Architecture]]** - Create the full-stack application
+1. **[01 - How the Project Works](01%20-%20How%20the%20Project%20Works.md)** - Understand the big picture
+2. **[02 - OpenAI Agents SDK](02%20-%20OpenAI%20Agents%20SDK.md)** - Learn the SDK primitives
+3. **[03 - Building the Components](03%20-%20Building%20the%20Components.md)** - Build the layered architecture
+4. **[04 - FastAPI + Next.js Architecture](04%20-%20FastAPI%20%2B%20Next.js%20Architecture.md)** - Create the full-stack application
 
 ---
 
@@ -71,5 +71,5 @@ Follow these guides in order:
 
 ## Connections
 
-- Prerequisites: [[../03 - Implementation/00-index|Implementation]]
-- Project: [[../05 - Projects/ai-logging-agent Level 1/README|Level 1 Project]]
+- Prerequisites: [Implementation](../03%20-%20Implementation/00-index.md)
+- Project: [Level 1 Project](../05%20-%20Projects/02-nextjs-production/README.md)

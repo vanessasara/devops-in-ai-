@@ -14,15 +14,15 @@ This section covers the architectural patterns that make AI agents effective and
 
 | Topic | Description |
 |-------|-------------|
-| [[Design Patterns for AI Agents]] | Five key patterns: Reflection, Tool Use, ReAct, Planning, Multi-Agent |
-| [[Multiple agents working together]] | Multi-agent architectures: Orchestrator, Triage, Agents as Tools |
+| [Design Patterns for AI Agents](Design%20Patterns%20for%20AI%20Agents.md) | Five key patterns: Reflection, Tool Use, ReAct, Planning, Multi-Agent |
+| [Multiple agents working together](Multiple%20agents%20working%20together.md) | Multi-agent architectures: Orchestrator, Triage, Agents as Tools |
 
 ---
 
 ## Learning Order
 
-1. Study [[Design Patterns for AI Agents]] to understand the five fundamental patterns
-2. Read [[Multiple agents working together]] for advanced multi-agent coordination
+1. Study [Design Patterns for AI Agents](Design%20Patterns%20for%20AI%20Agents.md) to understand the five fundamental patterns.
+2. Read [Multiple agents working together](Multiple%20agents%20working%20together.md) for advanced coordination patterns.
 
 ---
 
@@ -52,5 +52,5 @@ This matches how humans debug: form hypotheses, gather evidence, refine understa
 
 ## Connections
 
-- Prerequisites: [[../01 - Core Concepts/00-index|Core Concepts]]
-- Next: [[../03 - Implementation/00-index|Implementation]]
+- Prerequisites: [Core Concepts](../01%20-%20Core%20Concepts/00-index.md)
+- Next: [Implementation](../03%20-%20Implementation/00-index.md)

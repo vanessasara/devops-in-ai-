@@ -14,15 +14,15 @@ This section covers the practical aspects of building and deploying AI agents.
 
 | Topic | Description |
 |-------|-------------|
-| [[Data Retrieval]] | How to get logs from various sources into your agent |
-| [[Cost break down]] | Infrastructure and operational cost analysis |
+| [Data Retrieval](Data%20Retrieval.md) | How to get logs from various sources into your agent |
+| [Cost break down](Cost%20break%20down.md) | Infrastructure and operational cost analysis |
 
 ---
 
 ## Learning Order
 
-1. Study [[Data Retrieval]] to understand log ingestion strategies
-2. Review [[Cost break down]] for cost considerations before deployment
+1. Study [Data Retrieval](Data%20Retrieval.md) to understand log ingestion strategies.
+2. Review [Cost break down](Cost%20break%20down.md) for cost considerations before deployment.
 
 ---
 
@@ -54,5 +54,5 @@ S3               retrieve_logs()    → Two-pass approach
 
 ## Connections
 
-- Prerequisites: [[../02 - Design Patterns/00-index|Design Patterns]]
-- Next: [[../04 - Project Guide/00-index|Project Guide]]
+- Prerequisites: [Design Patterns](../02%20-%20Design%20Patterns/00-index.md)
+- Next: [Project Guide](../04%20-%20Project%20Guide/00-index.md)
