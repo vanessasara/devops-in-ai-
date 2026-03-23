@@ -87,7 +87,7 @@ Introduction ──→ Core Concepts ──→ Design Patterns ──→ Impleme
      │                │                  │                   │                  │
      └────────────────┴──────────────────┴───────────────────┴──────────────────┘
                                         │
-                                        ▼
+                                        ▼W
                                    Projects
 ```
 
