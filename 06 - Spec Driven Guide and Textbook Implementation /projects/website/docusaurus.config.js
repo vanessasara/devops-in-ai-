@@ -58,6 +58,8 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
+      // Violet accent theme colors
+      primaryColor: '#7c3aed',
     }),
 };
 

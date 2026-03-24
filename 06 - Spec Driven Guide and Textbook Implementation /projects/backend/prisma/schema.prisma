@@ -1,0 +1,104 @@
+// Prisma Schema for Interactive Textbook
+// Database: Neon Postgres
+
+generator client {
+  provider = "prisma-client-py"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Background level enum
+enum Background {
+  beginner
+  engineer
+  architect
+  manager
+}
+
+// User model for authentication and personalization
+model User {
+  id           String   @id @default(uuid()) @db.Uuid
+  email        String   @unique
+  passwordHash  String
+  background   Background @default(engineer)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  quizResults  QuizResult[]
+  chatMessages ChatMessage[]
+
+  @@map("users")
+}
+
+// Chapter model for textbook content
+model Chapter {
+  id           String   @id @default(uuid()) @db.Uuid
+  slug         String   @unique
+  title        String
+  order        Int
+  readingTime  Int      // in minutes
+  summary      String[] // 3-5 bullet points
+  body         String   @db.Text // MDX content
+  tags         String[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  quizzes      Quiz[]
+  quizResults  QuizResult[]
+
+  @@index([slug])
+  @@index([order])
+  @@map("chapters")
+}
+
+// Quiz model for chapter quizzes
+model Quiz {
+  id               String   @id @default(uuid()) @db.Uuid
+  chapterId        String   @db.Uuid
+  chapter          Chapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  questions        Json     // Array of {id, question, options[], correctIndex}
+  reflectionPrompt String?
+  generatedAt      DateTime @default(now())
+
+  @@index([chapterId])
+  @@map("quizzes")
+}
+
+// QuizResult model for user quiz submissions
+model QuizResult {
+  id          String   @id @default(uuid()) @db.Uuid
+  userId      String   @db.Uuid
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chapterId   String   @db.Uuid
+  chapter     Chapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  quizId      String   @db.Uuid
+  quiz        Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  answers     Json     // Array of {questionId, selectedIndex}
+  score       Int      // 0-4 correct
+  completedAt DateTime @default(now())
+
+  @@unique([userId, chapterId, quizId])
+  @@index([userId])
+  @@index([chapterId])
+  @@map("quiz_results")
+}
+
+// ChatMessage model for RAG chatbot history
+model ChatMessage {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String?  @db.Uuid // nullable for anonymous users
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  question  String   @db.Text
+  answer    String   @db.Text
+  sources   Json     // Array of {chapterSlug, sectionTitle, chunkText}
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([createdAt])
+  @@map("chat_messages")
+}

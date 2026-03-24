@@ -11,46 +11,46 @@
 
 ## Phase 1: Setup
 
-- [ ] T001 Initialize projects/website/ with Docusaurus v3 in projects/website/
-- [ ] T002 Initialize projects/backend/ with FastAPI in projects/backend/
-- [ ] T003 Configure projects/agents/ directory structure in projects/agents/
-- [ ] T004 Set up .env.example files for both frontend and backend
-- [ ] T005 Create initial docusaurus.config.js with violet theme in projects/website/docusaurus.config.js
+- [X] T001 Initialize projects/website/ with Docusaurus v3 in projects/website/
+- [X] T002 Initialize projects/backend/ with FastAPI in projects/backend/
+- [X] T003 Configure projects/agents/ directory structure in projects/agents/
+- [X] T004 Set up .env.example files for both frontend and backend
+- [X] T005 Create initial docusaurus.config.js with violet theme in projects/website/docusaurus.config.js
 
 ## Phase 2: Foundational
 
-- [ ] T006 Set up Prisma schema with all entities in projects/backend/prisma/schema.prisma
-- [ ] T007 Run initial database migration against Neon in projects/backend/
-- [ ] T008 Create Pydantic models for all API entities in projects/backend/src/models/
-- [ ] T009 Implement health check endpoint in projects/backend/src/api/health.py
-- [ ] T010 Create RAG indexing script for chapter content in projects/rag/indexer.py
-- [ ] T011 Set up Qdrant client and create collection in projects/backend/src/rag/qdrant_client.py
+- [X] T006 Set up Prisma schema with all entities in projects/backend/prisma/schema.prisma
+- [X] T007 Run initial database migration against Neon in projects/backend/
+- [X] T008 Create Pydantic models for all API entities in projects/backend/src/models/
+- [X] T009 Implement health check endpoint in projects/backend/src/api/health.py
+- [X] T010 Create RAG indexing script for chapter content in projects/rag/indexer.py
+- [X] T011 Set up Qdrant client and create collection in projects/backend/src/rag/qdrant_client.py
 
 ## Phase 3: User Story 1 - Read Textbook Chapters (P1)
 
 **Goal**: Users can navigate and read all textbook chapters on any device
 **Independent Test**: Load textbook, navigate chapters, verify mobile readability
 
-- [ ] T012 [P] [US1] Create chapter MDX files for all 7 chapters in projects/website/docs/
-- [ ] T013 [P] [US1] Configure docusaurus sidebars.js in projects/website/sidebars.js
-- [ ] T014 [US1] Implement GET /api/chapters endpoint in projects/backend/src/api/chapters.py
-- [ ] T015 [US1] Implement GET /api/chapters/{slug} endpoint in projects/backend/src/api/chapters.py
-- [ ] T016 [US1] Add prev/next navigation component in projects/website/src/components/PrevNext.js
-- [ ] T017 [US1] Create local search functionality in projects/website/
-- [ ] T018 [US1] Style Docusaurus with violet accent theme in projects/website/src/css/custom.css
+- [X] T012 [P] [US1] Create chapter MDX files for all 7 chapters in projects/website/docs/
+- [X] T013 [P] [US1] Configure docusaurus sidebars.js in projects/website/sidebars.js
+- [X] T014 [US1] Implement GET /api/chapters endpoint in projects/backend/src/api/chapters.py
+- [X] T015 [US1] Implement GET /api/chapters/{slug} endpoint in projects/backend/src/api/chapters.py
+- [X] T016 [US1] Add prev/next navigation component in projects/website/src/components/PrevNext.js
+- [X] T017 [US1] Create local search functionality in projects/website/
+- [X] T018 [US1] Style Docusaurus with violet accent theme in projects/website/src/css/custom.css
 
 ## Phase 4: User Story 2 - Ask Chatbot Questions (P1)
 
 **Goal**: Users can ask the AI chatbot questions that are answered only from textbook content
 **Independent Test**: Ask questions, verify answers cite sources, verify out-of-scope questions are rejected
 
-- [ ] T019 [P] [US2] Create RAG retrieval function in projects/backend/src/rag/retriever.py
-- [ ] T020 [P] [US2] Implement embedding generation with MiniLM in projects/backend/src/rag/embeddings.py
-- [ ] T021 [US2] Create chat system prompt with grounding instructions in projects/agents/rag-chatbot/SKILL.md
-- [ ] T022 [US2] Implement POST /api/chat endpoint in projects/backend/src/api/chat.py
-- [ ] T023 [US2] Build chat widget component in projects/website/src/components/ChatWidget.js
-- [ ] T024 [US2] Add citation display and clickable links in projects/website/src/components/ChatMessage.js
-- [ ] T025 [US2] Test RAG returns citations for all in-scope questions in projects/backend/tests/
+- [X] T019 [P] [US2] Create RAG retrieval function in projects/backend/src/rag/retriever.py
+- [X] T020 [P] [US2] Implement embedding generation with MiniLM in projects/backend/src/rag/embeddings.py
+- [X] T021 [US2] Create chat system prompt with grounding instructions in projects/agents/rag-chatbot/SKILL.md
+- [X] T022 [US2] Implement POST /api/chat endpoint in projects/backend/src/api/chat.py
+- [X] T023 [US2] Build chat widget component in projects/website/src/components/ChatWidget.js
+- [X] T024 [US2] Add citation display and clickable links in projects/website/src/components/ChatMessage.js
+- [X] T025 [US2] Test RAG returns citations for all in-scope questions in projects/backend/tests/
 
 ## Phase 5: User Story 3 - Create Account and Personalize (P2)
 
