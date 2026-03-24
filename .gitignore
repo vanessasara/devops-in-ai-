@@ -1,2 +1,60 @@
 # local installers / binaries not meant for the repo
 *.deb
+
+# Node.js/TypeScript
+node_modules/
+dist/
+build/
+*.log
+.env*
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node.js/JavaScript/TypeScript
+node_modules/
+dist/
+build/
+*.log
+.env*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+*.key
+*.crt
+secrets/
+*.secret.yaml
