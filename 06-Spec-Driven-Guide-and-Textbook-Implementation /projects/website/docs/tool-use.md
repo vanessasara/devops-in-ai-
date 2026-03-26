@@ -5,17 +5,13 @@ reading_time: 18
 tags: [tools, integration, apis]
 ---
 
+import ChapterContent from '@site/src/components/ChapterContent';
+
+<ChapterContent slug="tool-use">
+
 # Tool Use and Integration
 
-<div className="chapter-summary">
-<strong>Key Takeaways:</strong>
-<ul>
-<li>Tools extend agent capabilities beyond text generation</li>
-<li>Common DevOps tools include kubectl, terraform, and CI/CD APIs</li>
-<li>Tool schemas define inputs, outputs, and constraints</li>
-<li>Error handling and retry logic are critical for reliability</li>
-</ul>
-</div>
+
 
 ## Why Tools Matter
 
@@ -495,3 +491,5 @@ class MyTool(Tool):
 <BusinessValue>
 Well-designed tools reduce incident resolution time by 60-80%. Agents can diagnose and fix issues in seconds that would take humans 15-30 minutes.
 </BusinessValue>
+
+</ChapterContent>

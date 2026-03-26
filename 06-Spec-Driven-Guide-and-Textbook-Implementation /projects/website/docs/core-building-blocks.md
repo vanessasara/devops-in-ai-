@@ -5,17 +5,13 @@ reading_time: 15
 tags: [architecture, orchestration, tools]
 ---
 
+import ChapterContent from '@site/src/components/ChapterContent';
+
+<ChapterContent slug="core-building-blocks">
+
 # Core Building Blocks of Agentic Systems
 
-<div className="chapter-summary">
-<strong>Key Takeaways:</strong>
-<ul>
-<li>Orchestrator agents coordinate multiple specialized agents</li>
-<li>Worker agents execute specific tasks with defined interfaces</li>
-<li>Memory systems maintain context across interactions</li>
-<li>Tool use enables agents to interact with external systems</li>
-</ul>
-</div>
+
 
 ## Architecture Overview
 
@@ -414,3 +410,5 @@ class DeployWorker(WorkerAgent):
 <BusinessValue>
 Well-designed orchestrator/worker architectures reduce system complexity by 40-60%. Each component has clear boundaries, making testing, debugging, and scaling much easier.
 </BusinessValue>
+
+</ChapterContent>

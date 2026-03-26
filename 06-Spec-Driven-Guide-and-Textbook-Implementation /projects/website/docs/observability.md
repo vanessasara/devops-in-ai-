@@ -5,17 +5,13 @@ reading_time: 20
 tags: [observability, tracing, logging, debugging]
 ---
 
+import ChapterContent from '@site/src/components/ChapterContent';
+
+<ChapterContent slug="observability">
+
 # Observability for Agentic Systems
 
-<div className="chapter-summary">
-<strong>Key Takeaways:</strong>
-<ul>
-<li>Tracing tracks agent decision paths across tool calls</li>
-<li>Logging captures inputs, outputs, and intermediate states</li>
-<li>Metrics measure latency, token usage, and success rates</li>
-<li>Debugging tools help diagnose reasoning failures</li>
-</ul>
-</div>
+
 
 ## Why Observability Matters
 
@@ -463,3 +459,5 @@ def setup_observability(agent: Agent) -> Agent:
 <BusinessValue>
 Good observability reduces mean time to resolution (MTTR) by 60-80%. When you can see what happened, you can fix it faster.
 </BusinessValue>
+
+</ChapterContent>

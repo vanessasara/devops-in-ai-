@@ -228,13 +228,24 @@ The content will be loaded from MDX files in the docs directory.
     return chapter
 
 
+from ..services.summarizer import summarizer
+
+
 @router.get("/chapters/{slug}/summary")
-async def get_chapter_summary(slug: str):
+async def get_chapter_summary(
+    slug: str,
+    background: Optional[Background] = Query(
+        None,
+        description="Summary variant based on user background"
+    ),
+):
     """
     Get just the summary for a chapter.
+    Generates summary using LLM if not already cached.
 
     Args:
         slug: Chapter slug identifier
+        background: Optional user background for personalized summary
 
     Returns:
         Chapter summary and key terms
@@ -246,10 +257,22 @@ async def get_chapter_summary(slug: str):
         )
 
     data = CHAPTERS_DATA[slug]
+    
+    # In a real implementation, we would load the MDX content here
+    # For now, we use placeholder content to simulate the chapter text
+    chapter_content = f"Content for {data['title']}. " + " ".join(data['summary'])
+
+    # Generate personalized summary using the summarizer service
+    summary_data = await summarizer.generate_summary(
+        chapter_slug=slug,
+        chapter_content=chapter_content,
+        background=background.value if background else "engineer"
+    )
 
     return {
         "slug": slug,
         "title": data["title"],
-        "summary": data["summary"],
+        "summary": summary_data["summary"],
+        "keyTerms": summary_data.get("keyTerms", []),
         "reading_time": data["reading_time"],
     }

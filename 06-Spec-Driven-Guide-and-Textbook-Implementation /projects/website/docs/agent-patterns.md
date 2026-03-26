@@ -5,17 +5,13 @@ reading_time: 20
 tags: [patterns, react, triage, orchestration]
 ---
 
+import ChapterContent from '@site/src/components/ChapterContent';
+
+<ChapterContent slug="agent-patterns">
+
 # Agent Patterns for DevOps
 
-<div className="chapter-summary">
-<strong>Key Takeaways:</strong>
-<ul>
-<li>ReAct pattern combines reasoning with action selection</li>
-<li>Triage agents route requests to appropriate specialists</li>
-<li>Orchestrator patterns manage complex multi-step workflows</li>
-<li>Feedback loops enable continuous improvement</li>
-</ul>
-</div>
+
 
 ## The Pattern Language
 
@@ -579,3 +575,5 @@ def select_pattern(task_type: str) -> str:
 <BusinessValue>
 Using the right pattern for the task reduces incident resolution time by 30-50%. ReAct for novel issues, Triage for known categories, Orchestrator for complex workflows.
 </BusinessValue>
+
+</ChapterContent>

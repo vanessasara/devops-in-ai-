@@ -5,17 +5,13 @@ reading_time: 15
 tags: [security, prompt-injection, audit]
 ---
 
+import ChapterContent from '@site/src/components/ChapterContent';
+
+<ChapterContent slug="security-considerations">
+
 # Security Considerations
 
-<div className="chapter-summary">
-<strong>Key Takeaways:</strong>
-<ul>
-<li>Prompt injection attacks can manipulate agent behavior</li>
-<li>Tool access controls limit the blast radius of compromised agents</li>
-<li>Audit trails provide accountability for autonomous actions</li>
-<li>Defense in depth combines multiple security layers</li>
-</ul>
-</div>
+
 
 ## The Security Challenge
 
@@ -408,3 +404,5 @@ def secure_agent(agent_class):
 <BusinessValue>
 Security incidents with autonomous agents can cascade rapidly. Defense in depth reduces breach impact by 90%+ by containing compromises to individual layers.
 </BusinessValue>
+
+</ChapterContent>

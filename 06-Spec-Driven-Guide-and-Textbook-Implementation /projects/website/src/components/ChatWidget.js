@@ -166,8 +166,12 @@ export default function ChatWidget({
 
             {isLoading && (
               <div className="chat-message assistant loading">
-                <div className="loading-spinner" />
-                <span>Thinking...</span>
+                <div className="message-content thinking">
+                  <span className="dot">.</span>
+                  <span className="dot">.</span>
+                  <span className="dot">.</span>
+                  <span className="thinking-text">Thinking</span>
+                </div>
               </div>
             )}
 

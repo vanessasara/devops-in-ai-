@@ -5,17 +5,13 @@ reading_time: 22
 tags: [integration, apis, events]
 ---
 
+import ChapterContent from '@site/src/components/ChapterContent';
+
+<ChapterContent slug="integration-strategies">
+
 # Integration Strategies
 
-<div className="chapter-summary">
-<strong>Key Takeaways:</strong>
-<ul>
-<li>API-first integration enables loose coupling with existing systems</li>
-<li>Event-driven architectures support real-time agent responses</li>
-<li>Hybrid approaches combine synchronous and asynchronous workflows</li>
-<li>Security considerations include authentication, authorization, and audit trails</li>
-</ul>
-</div>
+
 
 ## Integration Patterns
 
@@ -375,3 +371,5 @@ def select_pattern(use_case: str) -> str:
 <BusinessValue>
 Event-driven architectures reduce coupling between services by 70-90%, making systems more resilient to change and easier to scale.
 </BusinessValue>
+
+</ChapterContent>

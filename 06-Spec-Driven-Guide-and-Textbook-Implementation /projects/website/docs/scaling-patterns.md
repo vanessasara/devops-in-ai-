@@ -5,17 +5,13 @@ reading_time: 18
 tags: [scaling, performance, cost-optimization]
 ---
 
+import ChapterContent from '@site/src/components/ChapterContent';
+
+<ChapterContent slug="scaling-patterns">
+
 # Scaling Patterns
 
-<div className="chapter-summary">
-<strong>Key Takeaways:</strong>
-<ul>
-<li>Horizontal scaling distributes workload across agent instances</li>
-<li>Caching strategies reduce redundant LLM calls</li>
-<li>Queue-based architectures handle burst traffic</li>
-<li>Cost optimization balances performance with API expenses</li>
-</ul>
-</div>
+
 
 ## The Scaling Challenge
 
@@ -469,3 +465,5 @@ class ProductionAgent:
 <BusinessValue>
 Proper scaling reduces infrastructure costs by 40-60% while maintaining performance. Caching alone can reduce API costs by 70-80%.
 </BusinessValue>
+
+</ChapterContent>

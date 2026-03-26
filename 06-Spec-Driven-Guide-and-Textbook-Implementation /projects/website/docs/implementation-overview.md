@@ -5,17 +5,13 @@ reading_time: 25
 tags: [implementation, architecture, deployment]
 ---
 
+import ChapterContent from '@site/src/components/ChapterContent';
+
+<ChapterContent slug="implementation-overview">
+
 # Implementation Overview
 
-<div className="chapter-summary">
-<strong>Key Takeaways:</strong>
-<ul>
-<li>Implementation follows a phased approach: foundation, agents, integration</li>
-<li>Start with clear use cases and success metrics</li>
-<li>Choose between framework-based and custom implementations</li>
-<li>Testing and evaluation are essential for production readiness</li>
-</ul>
-</div>
+
 
 ## The Implementation Journey
 
@@ -393,3 +389,5 @@ def is_ready_for_production(agent) -> bool:
 <BusinessValue>
 Phased implementation reduces risk by 60-80%. Each phase delivers value while building toward the complete solution.
 </BusinessValue>
+
+</ChapterContent>

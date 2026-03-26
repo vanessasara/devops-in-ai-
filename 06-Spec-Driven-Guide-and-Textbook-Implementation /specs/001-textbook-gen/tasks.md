@@ -85,19 +85,19 @@
 **Goal**: Users see summaries at start of each chapter
 **Independent Test**: Open chapter, verify 3-5 bullet summary appears
 
-- [ ] T042 [P] [US5] Create summarizer agent skill in projects/agents/summarizer/SKILL.md
-- [ ] T043 [P] [US5] Implement summary generation function in projects/backend/src/services/summarizer.py
-- [ ] T044 [US5] Cache summaries in database during build in projects/backend/src/services/summarizer.py
-- [ ] T045 [US5] Add summary section to chapter MDX template in projects/website/src/components/ChapterSummary.js
+- [X] T042 [P] [US5] Create summarizer agent skill in projects/agents/summarizer/SKILL.md
+- [X] T043 [P] [US5] Implement summary generation function in projects/backend/src/services/summarizer.py
+- [X] T044 [US5] Cache summaries in database during build in projects/backend/src/services/summarizer.py
+- [X] T045 [US5] Add summary section to chapter MDX template in projects/website/src/components/ChapterSummary.js
 
 ## Phase 8: Polish & Cross-Cutting Concerns
 
-- [ ] T046 Add error handling for chatbot unavailability in projects/backend/src/api/chat.py
-- [ ] T047 Handle session-less users (cookies disabled) with in-memory fallback in projects/backend/src/middleware/auth.py
-- [ ] T048 Add loading states to chat widget in projects/website/src/components/ChatWidget.js
-- [ ] T049 Verify mobile layout at 375px width in projects/website/src/css/custom.css
-- [ ] T050 Run performance tests (<2s page load, <5s chatbot response) in projects/
-- [ ] T051 Final end-to-end test: full user flow in projects/
+- [X] T046 Add error handling for chatbot unavailability in projects/backend/src/api/chat.py
+- [X] T047 Handle session-less users (cookies disabled) with in-memory fallback in projects/backend/src/middleware/auth.py
+- [X] T048 Add loading states to chat widget in projects/website/src/components/ChatWidget.js
+- [X] T049 Verify mobile layout at 375px width in projects/website/src/css/custom.css
+- [X] T050 Run performance tests (<2s page load, <5s chatbot response) in projects/
+- [X] T051 Final end-to-end test: full user flow in projects/
 
 ## Dependencies Graph
 

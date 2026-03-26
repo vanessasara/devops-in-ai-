@@ -5,17 +5,11 @@ reading_time: 10
 tags: [introduction, overview, concepts]
 ---
 
-# Introduction to Agentic AI
+import ChapterContent from '@site/src/components/ChapterContent';
 
-<div className="chapter-summary">
-<strong>Key Takeaways:</strong>
-<ul>
-<li>Agentic AI represents a paradigm shift from static automation to dynamic, goal-driven systems</li>
-<li>Agents use tools, maintain context, and make decisions autonomously</li>
-<li>Key patterns include ReAct (Reason + Act), Triage, and Orchestration</li>
-<li>DevOps applications span CI/CD, incident response, and infrastructure management</li>
-</ul>
-</div>
+<ChapterContent slug="intro">
+
+# Introduction to Agentic AI
 
 ## What is Agentic AI?
 
@@ -223,3 +217,5 @@ class Agent:
 <BusinessValue>
 Agentic systems reduce mean time to resolution (MTTR) by automating diagnostic and remediation steps that would otherwise require human intervention. Organizations report 40-60% reduction in MTTR with well-designed agent systems.
 </BusinessValue>
+
+</ChapterContent>
